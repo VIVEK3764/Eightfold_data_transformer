@@ -1,0 +1,26 @@
+{
+  "full_name": "John Doe",
+  "emails": ["john.doe@gmail.com"],
+  "phones": ["+1 234 567 8900"],
+  "location": "San Francisco, CA",
+  "headline": "Software Engineer II",
+  "skills": ["JavaScript", "Python", "C++", "Java", "AWS"],
+  "experience": [
+    {
+      "company": "Google LLC",
+      "job_title": "Software Engineer II",
+      "start_date": "2021-01",
+      "end_date": "Present",
+      "description": "Building scalable backend services in Go and Python."
+    }
+  ],
+  "education": [
+    {
+      "institution": "Stanford University",
+      "degree": "B.S. Computer Science",
+      "start_date": "2014-09",
+      "end_date": "2018-06"
+    }
+  ],
+  "years_experience": 5.5
+}

@@ -1,0 +1,31 @@
+{
+  "fields": [
+    {
+      "path": "candidate_name",
+      "from": "full_name"
+    },
+    {
+      "path": "primary_email",
+      "from": "emails[0]"
+    },
+    {
+      "path": "primary_phone",
+      "from": "phones[0]"
+    },
+    {
+      "path": "job_headline",
+      "from": "headline"
+    },
+    {
+      "path": "first_skill_name",
+      "from": "skills[0].name"
+    },
+    {
+      "path": "recent_company",
+      "from": "experience[0].company"
+    }
+  ],
+  "include_confidence": true,
+  "include_provenance": true,
+  "on_missing": "null"
+}

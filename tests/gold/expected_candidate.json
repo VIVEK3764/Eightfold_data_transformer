@@ -1,0 +1,140 @@
+{
+  "candidate_id": "gold-uuid",
+  "full_name": "John Andrew Doe",
+  "emails": [
+    "john@gmail.com"
+  ],
+  "phones": [
+    "+919876543210"
+  ],
+  "location": {},
+  "links": {},
+  "headline": "Senior Software Engineer",
+  "years_experience": null,
+  "skills": [
+    {
+      "name": "Java",
+      "confidence": 1.0,
+      "confidence_reason": [
+        "csv",
+        "ats",
+        "resume",
+        "notes"
+      ]
+    },
+    {
+      "name": "Spring Boot",
+      "confidence": 1.0,
+      "confidence_reason": [
+        "csv",
+        "resume"
+      ]
+    },
+    {
+      "name": "AWS",
+      "confidence": 1.0,
+      "confidence_reason": [
+        "ats",
+        "resume",
+        "notes"
+      ]
+    }
+  ],
+  "experience": [
+    {
+      "company": "Google",
+      "title": "Software Engineer",
+      "start": null,
+      "end": null,
+      "summary": null
+    },
+    {
+      "company": "Worked at Google Inc",
+      "title": "Software Engineer",
+      "start": null,
+      "end": null,
+      "summary": "Worked at Google Inc. as Software Engineer."
+    },
+    {
+      "company": "candidate",
+      "title": "Software Engineer",
+      "start": null,
+      "end": null,
+      "summary": "Mentions current company: candidate"
+    }
+  ],
+  "education": [],
+  "provenance": [
+    {
+      "field": "full_name",
+      "value": "John Andrew Doe",
+      "source": "resume",
+      "method": "winner_selected_from_conflict",
+      "source_confidence": 0.95
+    },
+    {
+      "field": "headline",
+      "value": "Senior Software Engineer",
+      "source": "resume",
+      "method": "winner_selected_from_conflict",
+      "source_confidence": 0.95
+    },
+    {
+      "field": "email",
+      "value": "john@gmail.com",
+      "source": "resume",
+      "method": "direct_mapping",
+      "source_confidence": 0.95
+    },
+    {
+      "field": "phone",
+      "value": "+919876543210",
+      "source": "resume",
+      "method": "direct_mapping",
+      "source_confidence": 0.95
+    },
+    {
+      "field": "skill",
+      "value": "Java",
+      "source": "resume",
+      "method": "skills_section_extraction",
+      "source_confidence": 0.95
+    },
+    {
+      "field": "skill",
+      "value": "Spring Boot",
+      "source": "resume",
+      "method": "skills_section_extraction",
+      "source_confidence": 0.95
+    },
+    {
+      "field": "skill",
+      "value": "AWS",
+      "source": "resume",
+      "method": "skills_section_extraction",
+      "source_confidence": 0.95
+    },
+    {
+      "field": "experience",
+      "value": "Software Engineer at Google",
+      "source": "csv",
+      "method": "experience_extraction",
+      "source_confidence": 0.75
+    },
+    {
+      "field": "experience",
+      "value": "Software Engineer at Worked at Google Inc",
+      "source": "resume",
+      "method": "experience_extraction",
+      "source_confidence": 0.95
+    },
+    {
+      "field": "experience",
+      "value": "Software Engineer at candidate",
+      "source": "notes",
+      "method": "experience_extraction",
+      "source_confidence": 0.6
+    }
+  ],
+  "overall_confidence": 0.912
+}

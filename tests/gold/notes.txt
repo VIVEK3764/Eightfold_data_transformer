@@ -1,0 +1,5 @@
+Candidate Name: John Doe
+Spoke with candidate. Currently at Google.
+Strong skills in Java, spring boot, AWS.
+Email is john@gmail.com
+Phone is 9876543210

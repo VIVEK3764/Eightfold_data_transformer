@@ -1,0 +1,10 @@
+{
+  "candidateName": "John A Doe",
+  "contactEmail": "john@gmail.com",
+  "currentEmployer": "Google LLC",
+  "jobTitle": "Software Engineer II",
+  "skills": [
+    "Java",
+    "AWS"
+  ]
+}

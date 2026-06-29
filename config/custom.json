@@ -1,0 +1,19 @@
+{
+  "fields": [
+    {
+      "path": "name",
+      "from": "full_name"
+    },
+    {
+      "path": "email",
+      "from": "emails[0]"
+    },
+    {
+      "path": "missing_field",
+      "from": "nonexistent_field"
+    }
+  ],
+  "include_confidence": false,
+  "include_provenance": false,
+  "on_missing": "omit"
+}

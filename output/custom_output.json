@@ -1,0 +1,144 @@
+{
+  "candidate_name": "JOHN DOE",
+  "primary_email": "john.doe@gmail.com",
+  "primary_phone": "+12345678900",
+  "job_headline": "Senior Software Engineer",
+  "first_skill_name": "C++",
+  "recent_company": "Google LLC",
+  "overall_confidence": 0.945,
+  "provenance": [
+    {
+      "field": "full_name",
+      "value": "JOHN DOE",
+      "source": "resume",
+      "method": "name_extraction",
+      "source_confidence": 0.95
+    },
+    {
+      "field": "headline",
+      "value": "Senior Software Engineer",
+      "source": "resume",
+      "method": "winner_selected_from_conflict",
+      "source_confidence": 0.95
+    },
+    {
+      "field": "email",
+      "value": "john.doe@gmail.com",
+      "source": "resume",
+      "method": "direct_mapping",
+      "source_confidence": 0.95
+    },
+    {
+      "field": "phone",
+      "value": "+12345678900",
+      "source": "resume",
+      "method": "direct_mapping",
+      "source_confidence": 0.95
+    },
+    {
+      "field": "phone",
+      "value": "+912345678900",
+      "source": "notes",
+      "method": "direct_mapping",
+      "source_confidence": 0.6
+    },
+    {
+      "field": "skill",
+      "value": "C++",
+      "source": "resume",
+      "method": "skills_section_extraction",
+      "source_confidence": 0.95
+    },
+    {
+      "field": "skill",
+      "value": "JavaScript",
+      "source": "resume",
+      "method": "skills_section_extraction",
+      "source_confidence": 0.95
+    },
+    {
+      "field": "skill",
+      "value": "Python",
+      "source": "resume",
+      "method": "skills_section_extraction",
+      "source_confidence": 0.95
+    },
+    {
+      "field": "skill",
+      "value": "Java",
+      "source": "ats",
+      "method": "direct_mapping",
+      "source_confidence": 0.9
+    },
+    {
+      "field": "skill",
+      "value": "AWS",
+      "source": "resume",
+      "method": "skills_section_extraction",
+      "source_confidence": 0.95
+    },
+    {
+      "field": "skill",
+      "value": "Spring Boot",
+      "source": "resume",
+      "method": "skills_section_extraction",
+      "source_confidence": 0.95
+    },
+    {
+      "field": "skill",
+      "value": "Docker",
+      "source": "resume",
+      "method": "skills_section_extraction",
+      "source_confidence": 0.95
+    },
+    {
+      "field": "experience",
+      "value": "Software Engineer II at Google LLC",
+      "source": "ats",
+      "method": "experience_extraction",
+      "source_confidence": 0.9
+    },
+    {
+      "field": "experience",
+      "value": "Senior Backend Developer at Unknown Company",
+      "source": "resume",
+      "method": "experience_extraction",
+      "source_confidence": 0.95
+    },
+    {
+      "field": "experience",
+      "value": "Software Engineer at Unknown Company",
+      "source": "resume",
+      "method": "experience_extraction",
+      "source_confidence": 0.95
+    },
+    {
+      "field": "experience",
+      "value": "Backend Engineer at John",
+      "source": "notes",
+      "method": "experience_extraction",
+      "source_confidence": 0.6
+    },
+    {
+      "field": "education",
+      "value": "None from Bachelor of Science in CS at Stanford University",
+      "source": "csv",
+      "method": "education_extraction",
+      "source_confidence": 0.75
+    },
+    {
+      "field": "education",
+      "value": "B.S. Computer Science from Stanford University",
+      "source": "ats",
+      "method": "education_extraction",
+      "source_confidence": 0.9
+    },
+    {
+      "field": "education",
+      "value": "Sep 2014 - Jun 2018 from Stanford University - Bachelor of Science in Computer Science",
+      "source": "resume",
+      "method": "education_extraction",
+      "source_confidence": 0.95
+    }
+  ]
+}
