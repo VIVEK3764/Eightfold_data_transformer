@@ -283,7 +283,3 @@ python -m pytest tests/
 
 ---
 
-## Demo Video
-
-🎥 **Watch the Walkthrough Demo (≈2 min)**: [Link to Loom/YouTube Demo Video - Insert URL here]
-*(Demonstrates end-to-end pipeline execution, custom schema projection, conflict resolution, and output validation).*
