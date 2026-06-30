@@ -1,37 +1,17 @@
 {
-  "candidate_id": "01580e7a-ed46-4554-9cb1-1e191f63bffe",
-  "full_name": "John Doe",
+  "candidate_id": "6e67c7e2-e394-46af-bd17-cab9aa8a3f20",
+  "full_name": "Vivek Kumar",
   "emails": [
-    "john@gmail.com",
-    "john.doe@gmail.com"
+    "gkrmvv4726@gmail.com"
   ],
   "phones": [
-    "+12345678900",
-    "+912345678900"
+    "+919142874726"
   ],
   "location": {},
   "links": {},
-  "headline": "Senior Software Engineer",
-  "years_experience": 5,
+  "headline": "AI/ML Engineer Intern",
+  "years_experience": 2,
   "skills": [
-    {
-      "name": "C++",
-      "confidence": 1.0,
-      "confidence_reason": [
-        "csv",
-        "ats",
-        "resume"
-      ]
-    },
-    {
-      "name": "JavaScript",
-      "confidence": 1.0,
-      "confidence_reason": [
-        "csv",
-        "ats",
-        "resume"
-      ]
-    },
     {
       "name": "Python",
       "confidence": 1.0,
@@ -43,7 +23,39 @@
       ]
     },
     {
-      "name": "Java",
+      "name": "React",
+      "confidence": 1.0,
+      "confidence_reason": [
+        "csv",
+        "resume"
+      ]
+    },
+    {
+      "name": "MySQL",
+      "confidence": 1.0,
+      "confidence_reason": [
+        "csv",
+        "resume"
+      ]
+    },
+    {
+      "name": "Kubernetes",
+      "confidence": 0.75,
+      "confidence_reason": [
+        "csv"
+      ]
+    },
+    {
+      "name": "C++",
+      "confidence": 1.0,
+      "confidence_reason": [
+        "csv",
+        "ats",
+        "resume"
+      ]
+    },
+    {
+      "name": "PyTorch",
       "confidence": 0.9,
       "confidence_reason": [
         "ats"
@@ -51,15 +63,106 @@
     },
     {
       "name": "AWS",
-      "confidence": 1.0,
+      "confidence": 0.9,
       "confidence_reason": [
-        "ats",
-        "resume",
-        "notes"
+        "ats"
       ]
     },
     {
-      "name": "Spring Boot",
+      "name": "Deep Learning",
+      "confidence": 1.0,
+      "confidence_reason": [
+        "ats",
+        "resume"
+      ]
+    },
+    {
+      "name": "Transformers",
+      "confidence": 1.0,
+      "confidence_reason": [
+        "ats",
+        "resume"
+      ]
+    },
+    {
+      "name": "C",
+      "confidence": 0.95,
+      "confidence_reason": [
+        "resume"
+      ]
+    },
+    {
+      "name": "Java",
+      "confidence": 0.95,
+      "confidence_reason": [
+        "resume"
+      ]
+    },
+    {
+      "name": "HTML",
+      "confidence": 0.95,
+      "confidence_reason": [
+        "resume"
+      ]
+    },
+    {
+      "name": "CSS",
+      "confidence": 0.95,
+      "confidence_reason": [
+        "resume"
+      ]
+    },
+    {
+      "name": "JavaScript",
+      "confidence": 0.95,
+      "confidence_reason": [
+        "resume"
+      ]
+    },
+    {
+      "name": "Node js",
+      "confidence": 0.95,
+      "confidence_reason": [
+        "resume"
+      ]
+    },
+    {
+      "name": "Spring Tools",
+      "confidence": 0.95,
+      "confidence_reason": [
+        "resume"
+      ]
+    },
+    {
+      "name": "NO SQL",
+      "confidence": 0.95,
+      "confidence_reason": [
+        "resume"
+      ]
+    },
+    {
+      "name": "Git",
+      "confidence": 0.95,
+      "confidence_reason": [
+        "resume"
+      ]
+    },
+    {
+      "name": "GitHub",
+      "confidence": 0.95,
+      "confidence_reason": [
+        "resume"
+      ]
+    },
+    {
+      "name": "Linux",
+      "confidence": 0.95,
+      "confidence_reason": [
+        "resume"
+      ]
+    },
+    {
+      "name": "REST APIs",
       "confidence": 0.95,
       "confidence_reason": [
         "resume"
@@ -67,59 +170,124 @@
     },
     {
       "name": "Docker",
+      "confidence": 0.95,
+      "confidence_reason": [
+        "resume"
+      ]
+    },
+    {
+      "name": "Machine Learning",
+      "confidence": 0.95,
+      "confidence_reason": [
+        "resume"
+      ]
+    },
+    {
+      "name": "Supervised & Unsupervised Learning",
+      "confidence": 0.95,
+      "confidence_reason": [
+        "resume"
+      ]
+    },
+    {
+      "name": "CNNs",
+      "confidence": 0.95,
+      "confidence_reason": [
+        "resume"
+      ]
+    },
+    {
+      "name": "RNNs",
+      "confidence": 0.95,
+      "confidence_reason": [
+        "resume"
+      ]
+    },
+    {
+      "name": "LSTMs",
+      "confidence": 0.95,
+      "confidence_reason": [
+        "resume"
+      ]
+    },
+    {
+      "name": "LLM",
+      "confidence": 0.95,
+      "confidence_reason": [
+        "resume"
+      ]
+    },
+    {
+      "name": "Prompt Engineering",
+      "confidence": 0.95,
+      "confidence_reason": [
+        "resume"
+      ]
+    },
+    {
+      "name": "Agentic AI",
       "confidence": 1.0,
       "confidence_reason": [
         "resume",
+        "notes"
+      ]
+    },
+    {
+      "name": "Multi-Agent Systems",
+      "confidence": 1.0,
+      "confidence_reason": [
+        "resume",
+        "notes"
+      ]
+    },
+    {
+      "name": "Feature Engineering",
+      "confidence": 0.95,
+      "confidence_reason": [
+        "resume"
+      ]
+    },
+    {
+      "name": "Model Evaluation",
+      "confidence": 0.95,
+      "confidence_reason": [
+        "resume"
+      ]
+    },
+    {
+      "name": "FastAPI",
+      "confidence": 0.6,
+      "confidence_reason": [
+        "notes"
+      ]
+    },
+    {
+      "name": "LangChain",
+      "confidence": 0.6,
+      "confidence_reason": [
         "notes"
       ]
     }
   ],
   "experience": [
     {
-      "company": "Google LLC",
-      "title": "Software Engineer II",
-      "start": "2021-01",
+      "company": "IIT Patna AI Lab",
+      "title": "AI/ML Engineer Intern",
+      "start": "2024-05",
       "end": "Present",
-      "summary": "Building scalable backend services in Go and Python."
-    },
-    {
-      "company": "Unknown Company",
-      "title": "Senior Backend Developer",
-      "start": null,
-      "end": null,
-      "summary": null
-    },
-    {
-      "company": "Unknown Company",
-      "title": "Software Engineer",
-      "start": null,
-      "end": null,
-      "summary": "Google - Senior Software Engineer\nJan 2020 - Present\nDesigned and implemented scalable microservices using Python and Go."
-    },
-    {
-      "company": "John",
-      "title": "Senior Software Engineer",
-      "start": null,
-      "end": null,
-      "summary": "Mentions current company: John"
+      "summary": "Researching multimodal deep learning models and agentic AI systems."
     }
   ],
   "education": [
     {
-      "institution": "Bachelor of Science in CS at Stanford University",
-      "degree": null,
-      "field": null,
-      "end_year": null
-    },
-    {
-      "institution": "Stanford University",
-      "degree": "B.S. Computer Science",
+      "institution": "Indian Institute of Technology, Patna",
+      "degree": "B.Tech in Computer Science and Engineering CGPA: 9.04",
       "field": "Computer Science",
-      "end_year": 2018
+      "end_year": 2027
     },
     {
-      "institution": "Stanford University - Bachelor of Science in Computer Science",
-      "degree": "Sep 2014 - Jun 2018",
+      "institution": "Ambika Bhawani Public School,Muzaffarpur",
+      "degree": "Intermediate Percentage: 88.8%",
       "field": null,
       "end_year": null
     }
@@ -127,49 +295,119 @@
   "provenance": [
     {
       "field": "full_name",
-      "value": "John Doe",
+      "value": "Vivek Kumar",
       "source": "resume",
       "method": "winner_selected_from_conflict",
       "source_confidence": 0.95
     },
     {
       "field": "headline",
-      "value": "Senior Software Engineer",
-      "source": "resume",
+      "value": "AI/ML Engineer Intern",
+      "source": "ats",
       "method": "winner_selected_from_conflict",
-      "source_confidence": 0.95
+      "source_confidence": 0.9
     },
     {
       "field": "email",
-      "value": "john@gmail.com",
+      "value": "gkrmvv4726@gmail.com",
+      "source": "resume",
+      "method": "direct_mapping",
+      "source_confidence": 0.95
+    },
+    {
+      "field": "phone",
+      "value": "+919142874726",
+      "source": "resume",
+      "method": "direct_mapping",
+      "source_confidence": 0.95
+    },
+    {
+      "field": "skill",
+      "value": "Python",
+      "source": "resume",
+      "method": "skills_section_extraction",
+      "source_confidence": 0.95
+    },
+    {
+      "field": "skill",
+      "value": "React",
+      "source": "resume",
+      "method": "skills_section_extraction",
+      "source_confidence": 0.95
+    },
+    {
+      "field": "skill",
+      "value": "MySQL",
+      "source": "resume",
+      "method": "skills_section_extraction",
+      "source_confidence": 0.95
+    },
+    {
+      "field": "skill",
+      "value": "Kubernetes",
+      "source": "csv",
+      "method": "direct_mapping",
+      "source_confidence": 0.75
+    },
+    {
+      "field": "skill",
+      "value": "C++",
+      "source": "resume",
+      "method": "skills_section_extraction",
+      "source_confidence": 0.95
+    },
+    {
+      "field": "skill",
+      "value": "PyTorch",
       "source": "ats",
       "method": "direct_mapping",
       "source_confidence": 0.9
     },
     {
-      "field": "email",
-      "value": "john.doe@gmail.com",
-      "source": "resume",
+      "field": "skill",
+      "value": "AWS",
+      "source": "ats",
       "method": "direct_mapping",
-      "source_confidence": 0.95
-    },
-    {
-      "field": "phone",
-      "value": "+12345678900",
-      "source": "resume",
-      "method": "direct_mapping",
-      "source_confidence": 0.95
-    },
-    {
-      "field": "phone",
-      "value": "+912345678900",
-      "source": "notes",
-      "method": "direct_mapping",
-      "source_confidence": 0.6
+      "source_confidence": 0.9
     },
     {
       "field": "skill",
-      "value": "C++",
+      "value": "Deep Learning",
+      "source": "resume",
+      "method": "skills_section_extraction",
+      "source_confidence": 0.95
+    },
+    {
+      "field": "skill",
+      "value": "Transformers",
+      "source": "resume",
+      "method": "skills_section_extraction",
+      "source_confidence": 0.95
+    },
+    {
+      "field": "skill",
+      "value": "C",
+      "source": "resume",
+      "method": "skills_section_extraction",
+      "source_confidence": 0.95
+    },
+    {
+      "field": "skill",
+      "value": "Java",
+      "source": "resume",
+      "method": "skills_section_extraction",
+      "source_confidence": 0.95
+    },
+    {
+      "field": "skill",
+      "value": "HTML",
+      "source": "resume",
+      "method": "skills_section_extraction",
+      "source_confidence": 0.95
+    },
+    {
+      "field": "skill",
+      "value": "CSS",
       "source": "resume",
       "method": "skills_section_extraction",
       "source_confidence": 0.95
@@ -183,28 +421,49 @@
     },
     {
       "field": "skill",
-      "value": "Python",
+      "value": "Node js",
       "source": "resume",
       "method": "skills_section_extraction",
       "source_confidence": 0.95
     },
     {
       "field": "skill",
-      "value": "Java",
-      "source": "ats",
-      "method": "direct_mapping",
-      "source_confidence": 0.9
-    },
-    {
-      "field": "skill",
-      "value": "AWS",
+      "value": "Spring Tools",
       "source": "resume",
       "method": "skills_section_extraction",
       "source_confidence": 0.95
     },
     {
       "field": "skill",
-      "value": "Spring Boot",
+      "value": "NO SQL",
+      "source": "resume",
+      "method": "skills_section_extraction",
+      "source_confidence": 0.95
+    },
+    {
+      "field": "skill",
+      "value": "Git",
+      "source": "resume",
+      "method": "skills_section_extraction",
+      "source_confidence": 0.95
+    },
+    {
+      "field": "skill",
+      "value": "GitHub",
+      "source": "resume",
+      "method": "skills_section_extraction",
+      "source_confidence": 0.95
+    },
+    {
+      "field": "skill",
+      "value": "Linux",
+      "source": "resume",
+      "method": "skills_section_extraction",
+      "source_confidence": 0.95
+    },
+    {
+      "field": "skill",
+      "value": "REST APIs",
       "source": "resume",
       "method": "skills_section_extraction",
       "source_confidence": 0.95
@@ -217,54 +476,117 @@
       "source_confidence": 0.95
     },
     {
-      "field": "experience",
-      "value": "Software Engineer II at Google LLC",
-      "source": "ats",
-      "method": "experience_extraction",
-      "source_confidence": 0.9
-    },
-    {
-      "field": "experience",
-      "value": "Senior Backend Developer at Unknown Company",
+      "field": "skill",
+      "value": "Machine Learning",
       "source": "resume",
-      "method": "experience_extraction",
+      "method": "skills_section_extraction",
       "source_confidence": 0.95
     },
     {
-      "field": "experience",
-      "value": "Software Engineer at Unknown Company",
+      "field": "skill",
+      "value": "Supervised & Unsupervised Learning",
       "source": "resume",
-      "method": "experience_extraction",
+      "method": "skills_section_extraction",
       "source_confidence": 0.95
     },
     {
-      "field": "experience",
-      "value": "Senior Software Engineer at John",
+      "field": "skill",
+      "value": "CNNs",
+      "source": "resume",
+      "method": "skills_section_extraction",
+      "source_confidence": 0.95
+    },
+    {
+      "field": "skill",
+      "value": "RNNs",
+      "source": "resume",
+      "method": "skills_section_extraction",
+      "source_confidence": 0.95
+    },
+    {
+      "field": "skill",
+      "value": "LSTMs",
+      "source": "resume",
+      "method": "skills_section_extraction",
+      "source_confidence": 0.95
+    },
+    {
+      "field": "skill",
+      "value": "LLM",
+      "source": "resume",
+      "method": "skills_section_extraction",
+      "source_confidence": 0.95
+    },
+    {
+      "field": "skill",
+      "value": "Prompt Engineering",
+      "source": "resume",
+      "method": "skills_section_extraction",
+      "source_confidence": 0.95
+    },
+    {
+      "field": "skill",
+      "value": "Agentic AI",
+      "source": "resume",
+      "method": "skills_section_extraction",
+      "source_confidence": 0.95
+    },
+    {
+      "field": "skill",
+      "value": "Multi-Agent Systems",
+      "source": "resume",
+      "method": "skills_section_extraction",
+      "source_confidence": 0.95
+    },
+    {
+      "field": "skill",
+      "value": "Feature Engineering",
+      "source": "resume",
+      "method": "skills_section_extraction",
+      "source_confidence": 0.95
+    },
+    {
+      "field": "skill",
+      "value": "Model Evaluation",
+      "source": "resume",
+      "method": "skills_section_extraction",
+      "source_confidence": 0.95
+    },
+    {
+      "field": "skill",
+      "value": "FastAPI",
       "source": "notes",
-      "method": "experience_extraction",
+      "method": "direct_mapping",
       "source_confidence": 0.6
     },
     {
-      "field": "education",
-      "value": "None from Bachelor of Science in CS at Stanford University",
-      "source": "csv",
-      "method": "education_extraction",
-      "source_confidence": 0.75
+      "field": "skill",
+      "value": "LangChain",
+      "source": "notes",
+      "method": "direct_mapping",
+      "source_confidence": 0.6
     },
     {
-      "field": "education",
-      "value": "B.S. Computer Science from Stanford University",
+      "field": "experience",
+      "value": "AI/ML Engineer Intern at IIT Patna AI Lab",
       "source": "ats",
-      "method": "education_extraction",
+      "method": "experience_extraction",
       "source_confidence": 0.9
     },
     {
       "field": "education",
-      "value": "Sep 2014 - Jun 2018 from Stanford University - Bachelor of Science in Computer Science",
+      "value": "B.Tech in Computer Science and Engineering CGPA: 9.04 from Indian Institute of Technology, Patna",
+      "source": "resume",
+      "method": "education_extraction",
+      "source_confidence": 0.95
+    },
+    {
+      "field": "education",
+      "value": "Intermediate Percentage: 88.8% from Ambika Bhawani Public School,Muzaffarpur",
       "source": "resume",
       "method": "education_extraction",
       "source_confidence": 0.95
     }
   ],
-  "overall_confidence": 0.938
+  "overall_confidence": 0.971
 }

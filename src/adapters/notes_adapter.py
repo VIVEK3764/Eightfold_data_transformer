@@ -79,14 +79,16 @@ def parse_notes(file_path: str) -> List[Dict[str, Any]]:
                 
     # 6. Skills extraction: Search text for known skill names
     skills = []
-    # Check for direct list patterns like "skills: python, java"
-    skills_match = re.search(r"\b(?:skills|technologies|experience in)\s*:\s*([A-Za-z\s,+#;-]+)", text, re.IGNORECASE)
+    skills_match = re.search(r"\b(?:skills|technologies|experience in|strong skills in|skills include)\s*:?\s*([A-Za-z\s,+#;-]+)(?:\.|\n|$)", text, re.IGNORECASE)
     if skills_match:
         skills_str = skills_match.group(1).split("\n")[0]
         sep = ";" if ";" in skills_str else ","
         parts = [s.strip() for s in skills_str.split(sep) if s.strip()]
         for p in parts:
-            skills.append(normalize_skill(p))
+            # Strip leading 'and ' or 'or ' if present from natural phrasing
+            clean_p = re.sub(r"^(?:and|or)\s+", "", p, flags=re.IGNORECASE).strip()
+            if clean_p:
+                skills.append(normalize_skill(clean_p))
             
     if not skills:
         # Fallback to keyword matching for common tech stack

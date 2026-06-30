@@ -1,25 +1,30 @@
 {
-  "candidateName": "John A. Doe",
-  "contactEmail": "john@gmail.com",
-  "contactPhone": "+1 234 567 8900",
-  "currentEmployer": "Google LLC",
-  "jobTitle": "Software Engineer II",
-  "skills": ["JavaScript", "Python", "Java", "AWS", "C++"],
+  "candidateName": "Vivek K.",
+  "contactEmail": "gkrmvv4726@gmail.com",
+  "contactPhone": "+91 91428 74726",
+  "currentEmployer": "IIT Patna AI Lab",
+  "jobTitle": "AI/ML Engineer Intern",
+  "location": {
+    "city": "Patna",
+    "state": "Bihar",
+    "country": "IN"
+  },
+  "skills": ["Python", "C++", "PyTorch", "AWS", "Deep Learning", "Transformers"],
   "experience": [
     {
-      "company": "Google LLC",
-      "job_title": "Software Engineer II",
-      "start_date": "2021-01",
+      "company": "IIT Patna AI Lab",
+      "job_title": "AI/ML Engineer Intern",
+      "start_date": "2024-05",
       "end_date": "Present",
-      "description": "Building scalable backend services in Go and Python."
+      "description": "Researching multimodal deep learning models and agentic AI systems."
     }
   ],
   "education": [
     {
-      "institution": "Stanford University",
-      "degree": "B.S. Computer Science",
+      "institution": "Indian Institute of Technology, Patna",
+      "degree": "B.Tech Computer Science and Engineering",
       "field": "Computer Science",
-      "end_year": 2018
+      "end_year": 2027
     }
   ]
 }

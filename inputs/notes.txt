@@ -1,11 +1,11 @@
-Candidate: John Doe
-Role: Senior Software Engineer
-Location: San Francisco Bay Area
-Email: john@gmail.com
-Phone: (234) 567-8900
+Candidate: Vivek Kumar
+Role: Full Stack & AI Engineer
+Location: Muzaffarpur, Bihar
+Email: gkrmvv4726@gmail.com
+Phone: +91 91428 74726
 
 Recruiter notes:
-Spoke with John today. He is currently working as a Software Engineer at Google.
-Strong skills in python, js, Docker, and AWS.
-He has about 7 years of experience building distributed systems.
-Excellent communicator, highly recommended for senior backend roles.
+Spoke with Vivek today. He is a standout student at IIT Patna with a 9.04 CGPA.
+He has strong skills in Python, Agentic AI, Multi-Agent Systems, FastAPI, and LangChain.
+Ranked top 200 in Amazon ML Challenge and Specialist on Codeforces.
+Highly enthusiastic about AI research and distributed systems development.

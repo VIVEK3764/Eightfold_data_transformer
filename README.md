@@ -78,7 +78,7 @@ eightfold-transformer/
 │   │   ├── validator.py         # Candidate & Output validators
 │   │   └── validation_result.py # validation result wrapper
 │   └── main.py                  # CLI pipeline orchestrator
-└── tests/                       # Pytest test suites (91 passed)
+└── tests/                       # Pytest test suites (121 passed)
 ```
 
 ---
@@ -114,18 +114,18 @@ PYTHONPATH=. python src/main.py --csv inputs/recruiter.csv --ats inputs/ats.json
 ### ATS JSON
 ```json
 {
-  "candidateName": "John A Doe",
-  "contactEmail": "john@gmail.com",
-  "currentEmployer": "Google LLC",
-  "jobTitle": "Software Engineer II",
-  "skills": ["Java", "AWS"]
+  "candidateName": "Vivek K.",
+  "contactEmail": "gkrmvv4726@gmail.com",
+  "currentEmployer": "IIT Patna AI Lab",
+  "jobTitle": "AI/ML Engineer Intern",
+  "skills": ["Python", "C++", "PyTorch", "AWS"]
 }
 ```
 
 ### Recruiter CSV
 ```csv
-name,email,phone,current_company,title,skills
-John Doe,john@gmail.com,9876543210,Google,Software Engineer,Java;Spring Boot
+full_name,email,phone,headline,skills,location,years_experience
+Vivek Kumar,gkrmvv4726@gmail.com,(+91)-91428-74726,Software Engineer Intern,Python;React.js;MySQL;Kubernetes,Bangalore KA,2
 ```
 
 ---
@@ -134,31 +134,31 @@ John Doe,john@gmail.com,9876543210,Google,Software Engineer,Java;Spring Boot
 
 ```json
 {
-  "candidate_id": "8488e09f-0955-4cc6-8e10-911e860959f6",
-  "full_name": "John Andrew Doe",
+  "candidate_id": "c935a7d4-46bc-4de2-98f1-c88227164850",
+  "full_name": "Vivek Kumar",
   "emails": [
-    "john@gmail.com"
+    "gkrmvv4726@gmail.com"
   ],
   "phones": [
-    "+919876543210"
+    "+919142874726"
   ],
   "location": {},
   "links": {},
-  "headline": "Senior Software Engineer",
-  "years_experience": 6,
+  "headline": "AI/ML Engineer Intern",
+  "years_experience": 2,
   "skills": [
     {
-      "name": "Java",
+      "name": "Python",
       "confidence": 1.0,
       "confidence_reason": [
-        "resume",
-        "ats",
         "csv",
+        "ats",
+        "resume",
         "notes"
       ]
     }
   ],
-  "overall_confidence": 0.912
+  "overall_confidence": 0.971
 }
 ```
 
@@ -202,7 +202,7 @@ Supports transforming candidate data to match custom configurations dynamically 
 
 ## Testing
 
-Run all 91 tests in the repository:
+Run all 121 tests in the repository:
 ```bash
 python -m pytest tests/
 ```

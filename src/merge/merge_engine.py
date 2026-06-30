@@ -136,7 +136,11 @@ def merge_experience(records: List[Dict[str, Any]]) -> List[Experience]:
             end = (exp.get("end") or "").strip() or None
             summary = (exp.get("summary") or "").strip() or None
 
-            if not co:
+            if not co or co.lower() in ["unknown company", "unknown", "none", "null"]:
+                continue
+            # Ignore false-positive company extractions matching candidate name tokens
+            cand_name = (rec.get("full_name") or "").lower().split()
+            if co.lower() in cand_name:
                 continue
 
             key = _exp_dedup_key(co, title, start, end)
@@ -150,10 +154,19 @@ def merge_experience(records: List[Dict[str, Any]]) -> List[Experience]:
     return raw_entries
 
 
+def _norm_inst_key(inst: str) -> str:
+    """Normalizes institution name for deduplication (strips punctuation and date ranges)."""
+    clean = re.sub(r"\b(?:Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)[a-z]*\s+\d{4}\s*[-–]\s*(?:\d{4}|Present|Current)\b|\b\d{4}\s*[-–]\s*(?:\d{4}|Present|Current)\b", "", inst, flags=re.IGNORECASE)
+    return re.sub(r"[^\w\s]", "", clean.lower()).split()[0] if clean.split() else ""
+
 def merge_education(records: List[Dict[str, Any]]) -> List[Education]:
-    """Merges unique education records across all sources, removing exact duplicates."""
-    seen: set = set()
-    raw_entries: List[Education] = []
+    """
+    Merges education records across all sources.
+    Deduplicates by normalized institution name so 'IIT Patna' across CSV, ATS, and Resume
+    combine into a single enriched education profile.
+    """
+    grouped: Dict[str, Education] = {}
+    ordered_keys: List[str] = []
 
     for rec in records:
         for edu in rec.get("education") or []:
@@ -174,12 +187,39 @@ def merge_education(records: List[Dict[str, Any]]) -> List[Education]:
             if not inst:
                 continue
 
-            key = (inst.lower(), (deg or "").lower(), (field or "").lower(), end_year)
-            if key not in seen:
-                seen.add(key)
-                raw_entries.append(Education(institution=inst, degree=deg, field=field, end_year=end_year))
+            # Strip any trailing date ranges from institution string
+            inst_clean = re.sub(r"\s+\b(?:Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)[a-z]*\s+\d{4}\s*[-–]\s*(?:\d{4}|Present|Current)\b|\s+\b\d{4}\s*[-–]\s*(?:\d{4}|Present|Current)\b", "", inst, flags=re.IGNORECASE).strip()
 
-    return raw_entries
+            norm_key = re.sub(r"[^\w\s]", "", inst_clean.lower())
+            # Find if an existing group matches this institution
+            matched_key = None
+            for existing_key in ordered_keys:
+                if norm_key == existing_key or norm_key in existing_key or existing_key in norm_key:
+                    matched_key = existing_key
+                    break
+
+            if not matched_key:
+                ordered_keys.append(norm_key)
+                grouped[norm_key] = Education(
+                    institution=inst_clean,
+                    degree=deg,
+                    field=field,
+                    end_year=end_year
+                )
+            else:
+                existing = grouped[matched_key]
+                # Prefer institution name with proper punctuation/length
+                if len(inst_clean) > len(existing.institution) or "," in inst_clean and "," not in existing.institution:
+                    existing.institution = inst_clean
+                # Take richer degree
+                if not existing.degree or (deg and len(deg) > len(existing.degree)):
+                    existing.degree = deg
+                if not existing.field and field:
+                    existing.field = field
+                if not existing.end_year and end_year:
+                    existing.end_year = end_year
+
+    return [grouped[k] for k in ordered_keys]
 
 
 # ─── Years-of-experience calculator ──────────────────────────────────────────

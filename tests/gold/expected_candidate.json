@@ -27,7 +27,8 @@
       "confidence": 1.0,
       "confidence_reason": [
         "csv",
-        "resume"
+        "resume",
+        "notes"
       ]
     },
     {

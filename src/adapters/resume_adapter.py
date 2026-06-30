@@ -138,17 +138,18 @@ def parse_resume(file_path: str) -> List[Dict[str, Any]]:
             continue
         if skills_section_active:
             # If we hit another major section header, stop
-            if re.match(r"^(experience|education|work history|projects|summary):?$", line.lower()):
+            if re.match(r"^(experience|education|work history|projects|summary|achievements|extra curricular|relevant coursework):?$", line.lower()):
                 skills_section_active = False
                 continue
-            # Extract skills (either split by comma or per line)
-            if "," in line or ";" in line:
-                sep = ";" if ";" in line else ","
-                parts = [s.strip() for s in line.split(sep) if s.strip()]
+            # Strip category prefixes like 'Languages:' or 'Web Development:' before splitting
+            clean_line = re.sub(r"^[^:]+:\s*", "", line)
+            if "," in clean_line or ";" in clean_line:
+                sep = ";" if ";" in clean_line else ","
+                parts = [s.strip() for s in clean_line.split(sep) if s.strip()]
                 for p in parts:
                     skills.append(normalize_skill(p))
             else:
-                skills.append(normalize_skill(line))
+                skills.append(normalize_skill(clean_line))
                 
     # If no skills section was found or empty, search for keywords heuristically
     if not skills:
@@ -202,18 +203,26 @@ def parse_resume(file_path: str) -> List[Dict[str, Any]]:
             edu_section_active = True
             continue
         if edu_section_active:
-            if re.match(r"^(experience|skills|projects|summary):?$", line.lower()):
+            if re.match(r"^(experience|skills|technical skills|projects|summary|relevant coursework|coursework|achievements|extra curricular):?$", line.lower()):
                 edu_section_active = False
                 continue
             edu_block.append(line)
             
-    if edu_block:
-        education.append({
-            "institution": edu_block[0],
-            "degree": edu_block[1] if len(edu_block) > 1 else None,
-            "field": None,
-            "end_year": None
-        })
+    date_range_re = re.compile(r"\b(?:Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)[a-z]*\s+\d{4}\s*[-–]\s*(?:(?:Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)[a-z]*\s+)?(?:\d{4}|Present|Current)\b|\b\d{4}\s*[-–]\s*(?:\d{4}|Present|Current)\b", re.IGNORECASE)
+    i = 0
+    while i < len(edu_block):
+        inst_line = date_range_re.sub("", edu_block[i]).strip().rstrip(",")
+        deg_line = None
+        if i + 1 < len(edu_block):
+            deg_line = date_range_re.sub("", edu_block[i + 1]).strip()
+        if inst_line and not re.match(r"^[\d\s.,\-]+$", inst_line):
+            education.append({
+                "institution": inst_line,
+                "degree": deg_line,
+                "field": None,
+                "end_year": None
+            })
+        i += 2
         
     # 7. Headline
     headline = ""
