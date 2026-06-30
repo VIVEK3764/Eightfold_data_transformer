@@ -94,7 +94,8 @@ pip install -r requirements.txt
 
 ## Running the Pipeline
 
-To run the complete end-to-end pipeline:
+### 1. Run with Default Schema (`config/default.json`)
+To run the complete end-to-end pipeline and generate the canonical candidate profile:
 
 **Windows PowerShell:**
 ```powershell
@@ -106,6 +107,24 @@ python src/main.py --csv inputs/recruiter.csv --ats inputs/ats.json --resume inp
 ```bash
 PYTHONPATH=. python src/main.py --csv inputs/recruiter.csv --ats inputs/ats.json --resume inputs/resume.pdf --notes inputs/notes.txt --config config/default.json
 ```
+
+### 2. Run with Custom Projection Schema (`config/custom.json`)
+To run the pipeline applying custom schema projections (renaming fields, extracting nested array items, or projecting lists):
+
+**Windows PowerShell:**
+```powershell
+$env:PYTHONPATH="."
+python src/main.py --csv inputs/recruiter.csv --ats inputs/ats.json --resume inputs/resume.pdf --notes inputs/notes.txt --config config/custom.json
+```
+
+**Linux / macOS:**
+```bash
+PYTHONPATH=. python src/main.py --csv inputs/recruiter.csv --ats inputs/ats.json --resume inputs/resume.pdf --notes inputs/notes.txt --config config/custom.json
+```
+
+When executed, the pipeline outputs two files to the `output/` directory:
+- `output/canonical.json`: The fully merged, standardized canonical candidate profile.
+- `output/custom_output.json`: The projected custom profile shaped by the active configuration file.
 
 ---
 
@@ -164,11 +183,44 @@ Vivek Kumar,gkrmvv4726@gmail.com,(+91)-91428-74726,Software Engineer Intern,Pyth
 
 ---
 
+## Example Projected Custom Output (`custom_output.json`)
+
+When running the pipeline with `config/custom.json`, `output/custom_output.json` produces the transformed view:
+
+```json
+{
+  "custom_profile_name": "Vivek Kumar",
+  "first_email_address": "gkrmvv4726@gmail.com",
+  "first_phone_number": "+919142874726",
+  "custom_headline": "AI/ML Engineer Intern",
+  "all_skills_list": [
+    "Python",
+    "React",
+    "MySQL",
+    "Kubernetes",
+    "C++",
+    "PyTorch",
+    "AWS"
+  ],
+  "overall_confidence": 0.971
+}
+```
+
+---
+
 ## Confidence Strategy
 
 Calculates the correctness of each field value deterministically using:
 
-$$\text{confidence} = \text{base\_source\_reliability} + (0.05 \times \text{agreement\_count}) - (0.10 \times \text{conflict\_count})$$
+```math
+\text{confidence} = \text{base\_source\_reliability} + (0.05 \times \text{agreement\_count}) - (0.10 \times \text{conflict\_count})
+```
+
+Or expressed in plain text formula syntax:
+
+```
+Confidence = Base Source Reliability + (0.05 * Agreement Count) - (0.10 * Conflict Count)
+```
 
 - **Base Reliabilities**: Resume (0.95), ATS (0.90), CSV (0.75), Notes (0.60).
 - **Agreement**: Adds $0.05$ for each additional agreeing source.
@@ -209,11 +261,17 @@ python -m pytest tests/
 
 ---
 
-## Assumptions
+## Assumptions & Descoped Items
 
+### Assumptions
 - **Priority order**: In case of duplicate/conflicting fields, data is sorted according to `Resume > ATS > CSV > Notes`.
 - **E.164 Default Region**: Missing country-code prefixes for phone numbers are resolved assuming region `IN` by default.
 - **Candidate completeness**: Candidate ID, institution in education, and company in experience are considered required fields.
+
+### Descoped Items / Out of Scope
+- **Live API/Web Crawling**: Live web scrapers or OAuth API integrations for LinkedIn/GitHub profiles are descoped in favor of robust ingestion of exported files (CSV, JSON, PDF/DOCX, TXT).
+- **LLM/Embeddings Semantic Mapping**: Using heavyweight neural network embeddings or LLM calls for skill normalization is descoped to maintain 100% deterministic reproducibility, millisecond execution speed, and zero external API dependencies.
+- **Deep Learning Graph Matching**: Graph neural networks for identity resolution are descoped in favor of deterministic BFS connected components graph clustering on exact/normalized contact identifiers.
 
 ---
 
@@ -222,3 +280,10 @@ python -m pytest tests/
 1. **Additional Adapters**: Native API connection for LinkedIn and GitHub candidate profile crawling.
 2. **Semantic Skill Mapping**: Grouping similar skills (e.g. `react` and `reactjs`) semantically rather than text-based matches.
 3. **Deep Learning Entity Resolution**: Applying machine learning classifiers to resolve edge cases of candidate matching.
+
+---
+
+## Demo Video
+
+🎥 **Watch the Walkthrough Demo (≈2 min)**: [Link to Loom/YouTube Demo Video - Insert URL here]
+*(Demonstrates end-to-end pipeline execution, custom schema projection, conflict resolution, and output validation).*
