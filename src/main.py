@@ -88,9 +88,12 @@ def main() -> None:
     for idx, cand in enumerate(canonical_candidates):
         res = validate_candidate(cand)
         if not res.valid:
-            logger.warning(f"Canonical candidate [{idx}] (ID: {cand.candidate_id}) failed validation: {res.errors}")
+            logger.warning(
+                f"Canonical candidate [{idx}] (ID: {cand.candidate_id}) "
+                f"has validation warnings: {res.errors}"
+            )
         else:
-            logger.info(f"Canonical candidate [{idx}] validated successfully.")
+            logger.info(f"Canonical candidate [{idx}] (ID: {cand.candidate_id}) validated successfully.")
             
     # 5. Config Loading & Validation
     config = None

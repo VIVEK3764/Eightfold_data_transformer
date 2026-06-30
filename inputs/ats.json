@@ -1,10 +1,10 @@
 {
-  "full_name": "John Doe",
-  "emails": ["john.doe@gmail.com"],
-  "phones": ["+1 234 567 8900"],
-  "location": "San Francisco, CA",
-  "headline": "Software Engineer II",
-  "skills": ["JavaScript", "Python", "C++", "Java", "AWS"],
+  "candidateName": "John A. Doe",
+  "contactEmail": "john@gmail.com",
+  "contactPhone": "+1 234 567 8900",
+  "currentEmployer": "Google LLC",
+  "jobTitle": "Software Engineer II",
+  "skills": ["JavaScript", "Python", "Java", "AWS", "C++"],
   "experience": [
     {
       "company": "Google LLC",
@@ -18,9 +18,8 @@
     {
       "institution": "Stanford University",
       "degree": "B.S. Computer Science",
-      "start_date": "2014-09",
-      "end_date": "2018-06"
+      "field": "Computer Science",
+      "end_year": 2018
     }
-  ],
-  "years_experience": 5.5
+  ]
 }

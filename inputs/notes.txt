@@ -1,11 +1,11 @@
 Candidate: John Doe
-Role: Backend Engineer
+Role: Senior Software Engineer
 Location: San Francisco Bay Area
-Email: john.doe@gmail.com
-Phone: 234-567-8900
+Email: john@gmail.com
+Phone: (234) 567-8900
 
 Recruiter notes:
 Spoke with John today. He is currently working as a Software Engineer at Google.
-Strong skills in python, js, and Docker.
-He has about 5 years of experience.
-Highly recommended.
+Strong skills in python, js, Docker, and AWS.
+He has about 7 years of experience building distributed systems.
+Excellent communicator, highly recommended for senior backend roles.

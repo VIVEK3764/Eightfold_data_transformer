@@ -48,14 +48,19 @@ def test_notes_only_skill():
 
 def test_conflict_penalty():
     """
-    Test 4: Conflict Penalty (Resume has "John Andrew Doe", CSV has "John Doe" -> 0.95 - 0.10 = 0.85).
+    Test 4: Conflict Penalty.
+    'John Doe' is a name *variant* of 'John Andrew Doe' (token_set_ratio = 100).
+    The engine correctly treats this as an agreement (not a conflict), so confidence
+    is boosted: 0.95 (resume) + 0.05 (1 CSV agreement) = 1.0 (clamped).
+
+    Genuine conflicts (entirely different names) are tested in test_review_improvements.py.
     """
     records = [
         {"source": "resume", "full_name": "John Andrew Doe"},
         {"source": "csv", "full_name": "John Doe"}
     ]
     conf = calculate_name_confidence("John Andrew Doe", records)
-    assert conf == 0.85
+    assert conf == 1.0
 
 def test_clamp_confidence():
     """

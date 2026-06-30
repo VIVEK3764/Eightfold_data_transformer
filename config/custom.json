@@ -1,19 +1,13 @@
 {
   "fields": [
-    {
-      "path": "name",
-      "from": "full_name"
-    },
-    {
-      "path": "email",
-      "from": "emails[0]"
-    },
-    {
-      "path": "missing_field",
-      "from": "nonexistent_field"
-    }
+    { "path": "custom_profile_name", "from": "full_name" },
+    { "path": "first_email_address", "from": "emails[0]" },
+    { "path": "first_phone_number",  "from": "phones[0]" },
+    { "path": "custom_headline",     "from": "headline" },
+    { "path": "top_skill",           "from": "skills[0].name" },
+    { "path": "all_skills_list",     "from": "skills[].name" }
   ],
-  "include_confidence": false,
+  "include_confidence": true,
   "include_provenance": false,
-  "on_missing": "omit"
+  "on_missing": "null"
 }

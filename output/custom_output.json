@@ -1,17 +1,17 @@
 {
-  "candidate_name": "JOHN DOE",
-  "primary_email": "john.doe@gmail.com",
+  "candidate_name": "John Doe",
+  "primary_email": "john@gmail.com",
   "primary_phone": "+12345678900",
   "job_headline": "Senior Software Engineer",
   "first_skill_name": "C++",
   "recent_company": "Google LLC",
-  "overall_confidence": 0.945,
+  "overall_confidence": 0.938,
   "provenance": [
     {
       "field": "full_name",
-      "value": "JOHN DOE",
+      "value": "John Doe",
       "source": "resume",
-      "method": "name_extraction",
+      "method": "winner_selected_from_conflict",
       "source_confidence": 0.95
     },
     {
@@ -20,6 +20,13 @@
       "source": "resume",
       "method": "winner_selected_from_conflict",
       "source_confidence": 0.95
+    },
+    {
+      "field": "email",
+      "value": "john@gmail.com",
+      "source": "ats",
+      "method": "direct_mapping",
+      "source_confidence": 0.9
     },
     {
       "field": "email",
@@ -114,7 +121,7 @@
     },
     {
       "field": "experience",
-      "value": "Backend Engineer at John",
+      "value": "Senior Software Engineer at John",
       "source": "notes",
       "method": "experience_extraction",
       "source_confidence": 0.6

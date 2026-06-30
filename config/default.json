@@ -27,5 +27,5 @@
   ],
   "include_confidence": true,
   "include_provenance": true,
-  "on_missing": "null"
+  "on_missing": "omit"
 }

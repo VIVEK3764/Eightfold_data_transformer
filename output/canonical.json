@@ -1,7 +1,8 @@
 {
-  "candidate_id": "8ec6deff-078b-477c-a830-94ddb82568b9",
-  "full_name": "JOHN DOE",
+  "candidate_id": "01580e7a-ed46-4554-9cb1-1e191f63bffe",
+  "full_name": "John Doe",
   "emails": [
+    "john@gmail.com",
     "john.doe@gmail.com"
   ],
   "phones": [
@@ -53,7 +54,8 @@
       "confidence": 1.0,
       "confidence_reason": [
         "ats",
-        "resume"
+        "resume",
+        "notes"
       ]
     },
     {
@@ -96,7 +98,7 @@
     },
     {
       "company": "John",
-      "title": "Backend Engineer",
+      "title": "Senior Software Engineer",
       "start": null,
       "end": null,
       "summary": "Mentions current company: John"
@@ -112,8 +114,8 @@
     {
       "institution": "Stanford University",
       "degree": "B.S. Computer Science",
-      "field": null,
-      "end_year": null
+      "field": "Computer Science",
+      "end_year": 2018
     },
     {
       "institution": "Stanford University - Bachelor of Science in Computer Science",
@@ -125,9 +127,9 @@
   "provenance": [
     {
       "field": "full_name",
-      "value": "JOHN DOE",
+      "value": "John Doe",
       "source": "resume",
-      "method": "name_extraction",
+      "method": "winner_selected_from_conflict",
       "source_confidence": 0.95
     },
     {
@@ -136,6 +138,13 @@
       "source": "resume",
       "method": "winner_selected_from_conflict",
       "source_confidence": 0.95
+    },
+    {
+      "field": "email",
+      "value": "john@gmail.com",
+      "source": "ats",
+      "method": "direct_mapping",
+      "source_confidence": 0.9
     },
     {
       "field": "email",
@@ -230,7 +239,7 @@
     },
     {
       "field": "experience",
-      "value": "Backend Engineer at John",
+      "value": "Senior Software Engineer at John",
       "source": "notes",
       "method": "experience_extraction",
       "source_confidence": 0.6
@@ -257,5 +266,5 @@
       "source_confidence": 0.95
     }
   ],
-  "overall_confidence": 0.945
+  "overall_confidence": 0.938
 }

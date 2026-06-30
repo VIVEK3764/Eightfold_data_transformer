@@ -1,2 +1,2 @@
-full_name,email,phone,headline,skills,experience,education,location,years_experience
-John Doe,john.doe@gmail.com,(+1)-234-567-8900,Senior Backend Developer,cpp;js;python,Software Engineer at Google,Bachelor of Science in CS at Stanford University,California,5
+full_name,email,phone,headline,skills,education,location,years_experience
+John Doe,john@gmail.com,(+1)-234-567-8900,Senior Backend Developer,cpp;js;python,Bachelor of Science in CS at Stanford University,San Francisco CA,5
